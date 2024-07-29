@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>生日礼物</title>
+    <style>
+      #secondPageContent {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="passwordForm"
+      style="
+        text-align: center;
+        background-color: rgb(215, 107, 7);
+        height: 600px;
+        padding-top: 30%;
+        font-size: large;
+        border: 10px solid rgb(10, 1, 1);
+      "
+    >
+      <label for="password">请输入密码(姓名首字母+生日日期)：</label>
+      <input type="password" id="password" name="password" />
+      <button type="button" onclick="revealContent()">登录</button>
+      <img
+        src="https://img95.699pic.com/element/40115/8965.png_860.png"
+        alt="神秘"
+        width="100px"
+      />
+    </form>
+
+    <div
+      id="secondPageContent"
+      style="
+        background-color: rgb(68, 42, 237);
+        border: 30px solid rgb(245, 237, 8);
+        height: 600px;
+      "
+    >
+      <h2 style="text-align: center; font-size: larger">
+        首先，祝你生日快乐！
+      </h2>
+      <p
+        style="
+          color: rgb(4, 248, 77);
+          width: 50%;
+          text-align: center;
+          border: 20px;
+          padding-left: 25%;
+        "
+      >
+        回顾过去往往，你我相识三载，不及无话不谈，亦算知心莫逆。
+        初中之际，喜汝之人甚多，听如是，说如此。
+        湘纹飘逸，笑比褒姒，盈盈十五，涓涓二八之年竟如此神清骨秀，
+        全露天真。才俊为你而痴，学士为你而癫，普天壤其无俪，旷千载而特生；
+        少年得见秋水伊人，实是生之大幸。
+        值此佳辰美景，日月同辉，群星共聚，万物皆为之欢腾。尔之诞辰，
+        犹如春风拂柳，夏日荷香，秋水共长天一色，冬雪映红梅之艳。
+        吾心潮澎湃，难以言表，惟愿以古之辞章，寄寓吾最深之祝福。
+        昔观尔之成长，如朝露之渐润，幼苗之渐壮。今尔已至豆蔻年华，
+        恰似春花烂漫，秋果丰硕，光彩夺目，令人赞叹。
+        愿尔如诗中所颂，既有“采菊东篱下，悠然见南山”的闲适，
+        亦有“仰天大笑出门去，我辈岂是蓬蒿人”的豪情。
+        愿尔学业有成，书山有路勤为径，学海无涯苦作舟。
+        愿尔智如珠玉，才似锦绣，每一步都踏着坚实的步伐，每一刻都充满着探索的勇气。
+        愿尔志存高远，胸怀天下，以梦为马，不负韶华，成就一番伟业。
+        愿尔友情深似海，亲情浓如酒。愿尔身边常有良师益友，相互砥砺，共同成长；
+        愿尔家庭和睦，父母康健，兄弟姐妹相亲相爱。
+        愿尔知恩图报，孝悌忠信，仁义礼智，成为品德兼备之人。
+        愿尔健康常伴，如松柏之坚韧，如翠竹之挺拔。
+        愿尔笑口常开，如晨曦之明媚，如晚霞之绚丽。
+        愿尔心中有爱，眼里有光，手上有书，脚下有路。
+        今兹尔之芳辰，余愿化作一缕清风，拂过尔的脸庞，带去清凉与舒适；
+        愿化作一滴甘露，滋润尔的心田，滋养尔的灵魂。
+        愿尔一生平安，一世幸福，岁月静好，笑靥如花。
+        最后，愿尔的人生路上，有诗也有远方，有梦也有希望。
+        愿尔在未来的日子里，无论风雨，都能勇往直前，绽放属于自己的光芒。
+        所愿皆所得。
+        敬颂，马廷益（注：本来想做点动画，实力不允许，时间也来不及，多包涵。替我保守秘密哦！）
+      </p>
+
+      <back id="back">
+        <button type="button" onclick="turnback()">返回</button>
+      </back>
+    </div>
+
+    <script>
+      function revealContent() {
+        var password = document.getElementById("password").value;
+        if (password === "ljx0805") {
+          document.getElementById("secondPageContent").style.display = "block";
+          document.getElementById("passwordForm").style.display = "none";
+        } else {
+          alert("你是猴子派来搞笑的？");
+        }
+      }
+      function turnback() {
+        document.getElementById("secondPageContent").style.display = "none";
+        document.getElementById("passwordForm").style.display = "block";
+        document.getElementById("password").value = "";
+      }
+    </script>
+  </body>
+</html>
